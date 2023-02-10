@@ -1,7 +1,7 @@
 .idea/
 pom.xml
 target/
-srs/test/
-srs/main/resources/
+src/test/
+src/main/resources/
 out/
 *.iml
