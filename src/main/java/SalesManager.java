@@ -1,28 +1,24 @@
 public class SalesManager {
     protected long[] sales;
-    protected int[] sales;
-    int category;
-    int total;
-    int average;
-    int count;
+    long category;
+    long total;
+    long average;
+    long count;
 
     public SalesManager(long[] sales) {
         this.sales = sales;
     }
 
-    public long max() {
-        long max = -1;
-        for (long sale : sales) {
-    public SalesManager(int total, int category, int average, int count) {
-        this.total = total;
+    public SalesManager(long category, long total, long average, long count) {
         this.category = category;
+        this.total = total;
         this.average = average;
         this.count = count;
     }
 
-    public int max() {
-        int max = -1;
-        for (int sale : sales) {
+    public long max() {
+        long max = -1;
+        for (long sale : sales) {
             if (sale > max) {
                 max = sale;
             }
