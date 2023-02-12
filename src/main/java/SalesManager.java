@@ -1,7 +1,7 @@
 public class SalesManager {
     protected int[] sales;
-    int total;
     int category;
+    int total;
     int average;
     int count;
 
