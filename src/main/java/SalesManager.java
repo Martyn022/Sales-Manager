@@ -1,19 +1,8 @@
 public class SalesManager {
     protected long[] sales;
-    long category;
-    long total;
-    long average;
-    long count;
 
     public SalesManager(long[] sales) {
         this.sales = sales;
-    }
-
-    public SalesManager(long category, long total, long average, long count) {
-        this.category = category;
-        this.total = total;
-        this.average = average;
-        this.count = count;
     }
 
     public long max() {
@@ -26,11 +15,22 @@ public class SalesManager {
         return max;
     }
 
-    public void counter() {
-        total = total + category;
-        count++;
-        average = total / 9;
-        System.out.println("Средний показатель равен: " + average);
+    public long min() {
+        long min = Integer.MAX_VALUE;
+        for (long sale : sales) {
+            if (min > sale) {
+                min = sale;
+            }
+        }
+        return min;
+    }
+
+    public long average() {
+        int total = 0;
+        for (long sale : sales) {
+            total += sale;
+        }
+        return (total - (min() + max())) / (sales.length - 2);
     }
 
 }
